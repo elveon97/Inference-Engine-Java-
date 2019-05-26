@@ -2,7 +2,7 @@ package knowledge;
 
 import java.util.ArrayList;
 
-class KnowledgeBase {
+public class KnowledgeBase {
   private ArrayList<Rule> rules;
   private static KnowledgeBase knowledgeBase;
 
@@ -21,9 +21,13 @@ class KnowledgeBase {
     knowledgeBase.rules.add(rule);
   }
 
+  public void addRule(String str) {
+    knowledgeBase.rules.add(new Rule(str));
+  }
+
   public void printRules() {
     for (Rule r: rules) {
-      System.out.println(r);
+      System.out.println(r);      
     }
   }
 }

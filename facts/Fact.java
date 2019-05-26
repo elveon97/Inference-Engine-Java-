@@ -1,6 +1,6 @@
 package facts;
 
-class Fact {
+public class Fact {
   private static int counter = 0;
   private int id;
   private String name;
@@ -9,6 +9,11 @@ class Fact {
     counter ++;
     id = counter;
     this.name = name;
+  }
+
+  @Override
+  public String toString() {
+    return "Name: "+name+", ID: "+id;
   }
 
   public int getId() {

@@ -1,0 +1,13 @@
+
+RULES {
+  A AND B --> C,
+  E --> D
+}
+
+FACTS {
+  A, B
+}
+
+GOAL {
+  D
+}

@@ -11,9 +11,7 @@ class Rule {
   public Rule(String str) {
     String arr[] = str.split("-->");
     condition = arr[0].trim();
-    action = arr[1].trim();
-    System.out.println("condition: "+condition);
-    System.out.println("action: "+action);
+    action = arr[1].trim();    
   }
 
   @Override
