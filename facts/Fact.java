@@ -5,9 +5,8 @@ public class Fact {
   private int id;
   private String name;
 
-  public Fact(String name) {
-    counter ++;
-    id = counter;
+  public Fact(String name) {    
+    id = ++counter;
     this.name = name.trim();
   }
 

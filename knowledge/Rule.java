@@ -6,22 +6,26 @@ public class Rule {
   private String condition;
   private String action;
   private boolean fired;
+  private static int counter = 0;
+  private int id;
 
   public Rule(String str) {
     String arr[] = str.split("-->");
     condition = arr[0].trim();
     action = arr[1].trim();
     fired = false;
+    id = ++counter;
   }
 
   @Override
   public String toString() {
-    return condition + " --> " + action;
+    return "R"+ id + ": " + condition + " --> " + action;
   }
 
   public static boolean parseRule(String condition) {
     java.util.Scanner s = new java.util.Scanner(condition);
     boolean val1 = FactsBase.getInstace().getFact(s.next()) == null? false : true;
+    if (!s.hasNext()) return val1;
     String op = s.next();
     boolean val2 = FactsBase.getInstace().getFact(s.next()) == null? false : true;
 
@@ -63,5 +67,9 @@ public class Rule {
 
   public boolean setFired(boolean fired) {
     return this.fired = fired;
+  }
+
+  public int getId() {
+    return this.id;
   }
 }
