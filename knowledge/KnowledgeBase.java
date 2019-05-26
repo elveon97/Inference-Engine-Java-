@@ -27,7 +27,11 @@ public class KnowledgeBase {
 
   public void printRules() {
     for (Rule r: rules) {
-      System.out.println(r);      
+      System.out.println(r);
     }
+  }
+
+  public ArrayList<Rule> getRules() {
+    return this.rules;
   }
 }

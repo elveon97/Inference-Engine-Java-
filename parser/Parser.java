@@ -46,7 +46,7 @@ public class Parser {
             for (String fact: aux.split(",")) { // Adds the facts to the FactsBase
               FactsBase.getInstace().addFact(fact);
             }
-            break;          
+            break;
         }
     }
 

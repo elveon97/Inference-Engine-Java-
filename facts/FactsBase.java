@@ -37,4 +37,8 @@ public class FactsBase {
       System.out.println(f);
     }
   }
+
+  public ArrayList<Fact> getFacts() {
+    return this.facts;
+  }
 }

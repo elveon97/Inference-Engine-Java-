@@ -1,12 +1,9 @@
 
 RULES {
-  A AND B --> C,
-  E --> D,
-  ABX --> ASD
+  A AND B --> C
 }
 
 FACTS {
   A,
-  B,
-  C
+  B  
 }

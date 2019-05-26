@@ -1,17 +1,17 @@
 package knowledge;
 
-class Rule {
-  String condition;
-  String action;
+import facts.*;
 
-  public static void main(String[] args) {
-    new Rule("A and B --> C");
-  }
+public class Rule {
+  private String condition;
+  private String action;
+  private boolean fired;
 
   public Rule(String str) {
     String arr[] = str.split("-->");
     condition = arr[0].trim();
-    action = arr[1].trim();    
+    action = arr[1].trim();
+    fired = false;
   }
 
   @Override
@@ -21,9 +21,9 @@ class Rule {
 
   public static boolean parseRule(String condition) {
     java.util.Scanner s = new java.util.Scanner(condition);
-    boolean val1 = Boolean.parseBoolean(s.next());
+    boolean val1 = FactsBase.getInstace().getFact(s.next()) == null? false : true;
     String op = s.next();
-    boolean val2 = Boolean.parseBoolean(s.next());
+    boolean val2 = FactsBase.getInstace().getFact(s.next()) == null? false : true;
 
     boolean res = false;
     switch (op.toUpperCase()) {
@@ -39,5 +39,29 @@ class Rule {
       res = parseRule(res + " " + s.nextLine());
     }
     return res;
+  }
+
+  public String getCondition() {
+    return this.condition;
+  }
+
+  public String getAction() {
+    return this.action;
+  }
+
+  public void setCondition(String condition) {
+    this.condition = condition;
+  }
+
+  public void setAction(String action) {
+    this.condition = action;
+  }
+
+  public boolean beenFired() {
+    return this.fired;
+  }
+
+  public boolean setFired(boolean fired) {
+    return this.fired = fired;
   }
 }

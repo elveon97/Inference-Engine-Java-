@@ -8,7 +8,7 @@ public class Fact {
   public Fact(String name) {
     counter ++;
     id = counter;
-    this.name = name;
+    this.name = name.trim();
   }
 
   @Override
