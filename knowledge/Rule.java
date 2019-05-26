@@ -1,3 +1,4 @@
+package knowledge;
 
 class Rule {
   String condition;

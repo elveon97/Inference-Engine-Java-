@@ -1,3 +1,5 @@
+package knowledge;
+
 import java.util.ArrayList;
 
 class KnowledgeBase {

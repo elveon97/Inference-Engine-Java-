@@ -1,3 +1,5 @@
+package facts;
+
 class Fact {
   private static int counter = 0;
   private int id;
