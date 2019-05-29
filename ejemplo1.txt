@@ -1,0 +1,7 @@
+RULES {
+  F OR G --> C
+}
+
+FACTS {
+  F
+}

@@ -1,0 +1,12 @@
+RULES {
+  A AND B --> C,
+  A --> D,
+  C AND D --> E,
+  B AND E AND F --> G,
+  A AND E --> H,
+  D AND E AND H --> I
+}
+
+FACTS {
+  A, B, F
+}

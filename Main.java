@@ -17,7 +17,11 @@ class Main {
         System.out.println("FAILURE...");
       }
     } else if (method == 'b') {
-
+      if (pd.backwardChaining()) {
+        System.out.println("SUCCESS!");
+      } else {
+        System.out.println("FAILURE...");
+      }
     }
   }
 }

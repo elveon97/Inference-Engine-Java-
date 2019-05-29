@@ -1,5 +1,7 @@
 package knowledge;
 
+import java.util.Scanner;
+
 import facts.*;
 
 public class Rule {
@@ -25,11 +27,9 @@ public class Rule {
   public static boolean parseRule(String condition) {
     java.util.Scanner s = new java.util.Scanner(condition);
     String str1 = s.next();
-    boolean val1;
+    boolean val1 = true;
     if (FactsBase.getInstace().getFact(str1) == null) {
       val1 = Boolean.parseBoolean(str1);
-    } else {
-      val1 = true;
     }
 
     if (!s.hasNext()) return val1;

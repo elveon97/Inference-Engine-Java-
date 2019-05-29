@@ -1,8 +1,12 @@
 
 RULES {
-  B and C and A --> D
+  B AND C --> A,
+  C AND D --> A,
+  E --> B,
+  F OR G --> C
 }
 
 FACTS {
-  B, C, A
+  E,
+  F
 }
