@@ -24,7 +24,14 @@ public class Rule {
 
   public static boolean parseRule(String condition) {
     java.util.Scanner s = new java.util.Scanner(condition);
-    boolean val1 = FactsBase.getInstace().getFact(s.next()) == null? false : true;
+    String str1 = s.next();
+    boolean val1;
+    if (FactsBase.getInstace().getFact(str1) == null) {
+      val1 = Boolean.parseBoolean(str1);
+    } else {
+      val1 = true;
+    }
+
     if (!s.hasNext()) return val1;
     String op = s.next();
     boolean val2 = FactsBase.getInstace().getFact(s.next()) == null? false : true;
