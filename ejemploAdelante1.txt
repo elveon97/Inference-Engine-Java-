@@ -1,0 +1,11 @@
+RULES {
+  B AND C --> A,
+  C AND D --> A,
+  E --> B,
+  F OR G --> C
+}
+
+FACTS {
+  E,
+  F
+}
